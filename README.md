@@ -13,8 +13,12 @@ Run the program with
 ```
 python main.py 
 ```
+Run to get ot of venv
+```
+deactivate
+```
 
-###What does the program?###
+What does the program do?
 Program will count 3-word phrases
 Ignore capitalization
 Ignore punctuation
