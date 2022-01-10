@@ -1,0 +1,17 @@
+fquiros@C02Z71TLLVDN phrase-counter % echo "hello world"
+hello world
+fquiros@C02Z71TLLVDN phrase-counter % echo "hello world" | grep hello
+hello world
+fquiros@C02Z71TLLVDN phrase-counter % echo "hello world" | grep bob  
+fquiros@C02Z71TLLVDN phrase-counter % echo "hello world" | tr a-z A-Z
+HELLO WORLD
+fquiros@C02Z71TLLVDN phrase-counter % echo "hello world" > helloText 
+fquiros@C02Z71TLLVDN phrase-counter % grep hello < helloText        
+hello world
+fquiros@C02Z71TLLVDN phrase-counter % grep hello < bob      
+zsh: no such file or directory: bob
+fquiros@C02Z71TLLVDN phrase-counter % grep bob < helloText
+fquiros@C02Z71TLLVDN phrase-counter % cat helloText 
+hello world
+fquiros@C02Z71TLLVDN phrase-counter % cat helloText | grep hello
+hello world

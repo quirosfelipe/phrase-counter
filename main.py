@@ -3,12 +3,22 @@ import sys
 
 
 def main():
-    if len(sys.argv) != 2:
+    # print(sys.argv)
+    if len(sys.argv) > 2:
+        # work in multiple fileinput here
+        # https://docs.python.org/3/library/fileinput.html
         print("Usage: python main.py <path to file>")
         sys.exit(1)
-
-    text_file = sys.argv[1]
-    f = open(text_file)
+    elif len(sys.argv) < 2:
+        # print("get stdin here")
+        # Ex: echo hello world food | python main.py
+        # Ex: cat origin.txt | python main.py
+        f = sys.stdin
+    else:
+        # Ex: python main.py origin.txt 
+        text_file = sys.argv[1]
+        f = open(text_file)
+    
     s = f.read()
     wordList = s.split()
     position = 0
