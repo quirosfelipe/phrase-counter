@@ -15,3 +15,11 @@ fquiros@C02Z71TLLVDN phrase-counter % cat helloText
 hello world
 fquiros@C02Z71TLLVDN phrase-counter % cat helloText | grep hello
 hello world
+
+(.venv) fquiros@C02Z71TLLVDN phrase-counter % ls -l main.py
+-rw-r--r--  1 fquiros  staff  1104 Jan 24 15:32 main.py
+(.venv) fquiros@C02Z71TLLVDN phrase-counter % grep staff /etc/group
+staff:*:20:root
+(.venv) fquiros@C02Z71TLLVDN phrase-counter % chmod u+x main.py
+(.venv) fquiros@C02Z71TLLVDN phrase-counter % ls -l main.py 
+-rwxr--r--  1 fquiros  staff  1104 Jan 24 15:32 main.py

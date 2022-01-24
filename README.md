@@ -18,6 +18,13 @@ Run to get ot of venv
 deactivate
 ```
 
+```
+Program accepts stdin.
+To change file permissions and make it executable: chmod u+x main.py 
+Then you can run: cat text.txt | ./main.py
+```
+
+
 What does the program do?
 Program will count 3-word phrases
 Ignore capitalization
