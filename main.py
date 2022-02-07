@@ -2,27 +2,36 @@
 
 from collections import defaultdict
 import sys
+import fileinput
 
 
 def main():
     print(sys.argv)
-    if len(sys.argv) > 2:
-        # work in multiple fileinput here
-        # https://docs.python.org/3/library/fileinput.html
-        print("Usage: python main.py <path to file>")
-        sys.exit(1)
-    elif len(sys.argv) < 2:
-        # print("get stdin here")
-        # Ex: echo hello world food | python main.py
-        # Ex: cat origin.txt | python main.py
-        f = sys.stdin
-    else:
-        # Ex: python main.py origin.txt 
-        text_file = sys.argv[1]
-        f = open(text_file)
+    wordList = []
+    for line in fileinput.input():
+        # print(line)
+        lineList = line.split()
+        wordList.extend(lineList)
+    # if len(sys.argv) > 2:
+    #     # work in multiple fileinput here
+    #     # https://docs.python.org/3/library/fileinput.html
+    #     # implemetation for multiple files is done above with the fileinput library
+    #     print("Usage: python main.py <path to file>")
+    #     sys.exit(1)
+    # elif len(sys.argv) < 2:
+    #     # this block allows stdin to pass the stream of bytes to the program.
+    #     # In the next example main.py is the only argument.
+    #     # Ex: echo hello world food | python main.py
+    #     # Ex: cat origin.txt text.txt | python main.py
+    #     f = sys.stdin
+    # else:
+    #     # The next block reads two arguments: main.py and origin.txt
+    #     # Ex: python main.py origin.txt 
+    #     text_file = sys.argv[1]
+    #     f = open(text_file)
     
-    s = f.read()
-    wordList = s.split()
+    # s = f.read()
+    # wordList = s.split()
     position = 0
     topN = 100
     myDict = defaultdict(int)
