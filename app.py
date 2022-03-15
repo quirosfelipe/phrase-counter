@@ -14,7 +14,8 @@ def createWordList(input):
         stripLineList = []
         for word in lineList:
             word = word.strip(string.punctuation)
-            stripLineList.append(word)
+            if word != '': # string is empty when a word does not contain any chars or vowels ex:'...'
+                stripLineList.append(word)
         wordList.extend(stripLineList)
     return wordList
 
