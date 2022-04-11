@@ -23,3 +23,5 @@ staff:*:20:root
 (.venv) fquiros@C02Z71TLLVDN phrase-counter % chmod u+x main.py
 (.venv) fquiros@C02Z71TLLVDN phrase-counter % ls -l main.py 
 -rwxr--r--  1 fquiros  staff  1104 Jan 24 15:32 main.py
+
+docker  run  -v `pwd`/sample_data:/data -it 01360f572f4 /data/punc.txt
