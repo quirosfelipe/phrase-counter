@@ -24,10 +24,11 @@ def countWords(wordList, topN = 100):
     position = 0
     wordCount = defaultdict(int)
     myDict = defaultdict(int)
-    while position < len(wordList) - 2:
-        word_one = wordList[position].lower()
-        word_two = wordList[position + 1].lower()
-        word_three = wordList[position + 2].lower()
+    wordListStop =len(wordList) - 2
+    while position < wordListStop:
+        word_one = wordList[position]
+        word_two = wordList[position + 1]
+        word_three = wordList[position + 2]
         myDict[
             (word_one, word_two, word_three)
         ] += 1

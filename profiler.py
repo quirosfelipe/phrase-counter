@@ -3,3 +3,4 @@
 import cProfile
 import app
 
+cProfile.run('app.start()')
